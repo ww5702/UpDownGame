@@ -26,7 +26,7 @@ Compare number
 Show alerts   
 Implement reset feature   
 Add Credit information view   
-
+***
 2022.11.22   
 Xcode 11버전까지는 Single View App 이 존재하였으나, 지금은 App으로 명칭이 변경되었다.   
    

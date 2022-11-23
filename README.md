@@ -45,3 +45,19 @@ Auto Layout
 사용자에게 보여줄 인터페이스   
 Constraints you specify (제약을 통해 보여준다)   
 
+***
+2022.11.23   
+   
+A…B = A부터 B까지   
+A..<B = A부터 B미만   
+…A = ~A까지   
+A… = A부터 ~ 까지   
+   
+   
+textview는 글의 길이가 늘어나면 자동으로 스크롤이 가능하다   
+Textfield와 textview는 복사붙여넣기가 가능하다.   
+Textfield는 한줄씩 표현하기 위한 기능   
+lable은 자동 스크롤 기능이 구현x   
+   
+Textview의 설정에서    
+behavior -> editable 는 사용자가 수정가능/불가능 설정   

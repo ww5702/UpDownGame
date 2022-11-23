@@ -8,6 +8,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Credit View Controller-->
+        <scene sceneID="gJ8-S7-bPg">
+            <objects>
+                <viewController id="plh-Ky-MJw" customClass="CreditViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aQS-36-763">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yK4-Gp-SKe">
+                                <rect key="frame" x="60" y="19.999999999999996" width="74" height="54.666666666666657"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="plh-Ky-MJw" eventType="touchUpInside" id="0BO-tT-XPT"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="n6I-vx-T5c">
+                                <rect key="frame" x="60" y="96.666666666666686" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GDS-9t-I9o"/>
+                                    <constraint firstAttribute="width" constant="200" id="VfX-A0-WGC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UpDownGame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC6-X3-A6r">
+                                <rect key="frame" x="280" y="96.666666666666671" width="179" height="34.000000000000014"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a19-38-762">
+                                <rect key="frame" x="280" y="150.66666666666663" width="552" height="188.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">iOS programming basic 
+
+practicing the basic process of app development. 
+
+git : https://github.com/ww5702</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WVz-Qg-uV0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n6I-vx-T5c" firstAttribute="leading" secondItem="yK4-Gp-SKe" secondAttribute="leading" id="0Gj-k3-ZRZ"/>
+                            <constraint firstItem="a19-38-762" firstAttribute="leading" secondItem="n6I-vx-T5c" secondAttribute="trailing" constant="20" id="1nF-qo-1Rc"/>
+                            <constraint firstItem="a19-38-762" firstAttribute="top" secondItem="DC6-X3-A6r" secondAttribute="bottom" constant="20" id="2Vi-Bb-4DM"/>
+                            <constraint firstItem="WVz-Qg-uV0" firstAttribute="trailing" secondItem="a19-38-762" secondAttribute="trailing" constant="20" id="56B-ap-Yyn"/>
+                            <constraint firstItem="DC6-X3-A6r" firstAttribute="top" secondItem="n6I-vx-T5c" secondAttribute="top" id="7XZ-wL-b4e"/>
+                            <constraint firstItem="yK4-Gp-SKe" firstAttribute="top" secondItem="aQS-36-763" secondAttribute="top" constant="20" id="FCH-oe-DWW"/>
+                            <constraint firstItem="DC6-X3-A6r" firstAttribute="leading" secondItem="n6I-vx-T5c" secondAttribute="trailing" constant="20" id="Glg-QY-cHT"/>
+                            <constraint firstItem="n6I-vx-T5c" firstAttribute="centerY" secondItem="aQS-36-763" secondAttribute="centerY" id="LHx-Wb-smy"/>
+                            <constraint firstItem="yK4-Gp-SKe" firstAttribute="leading" secondItem="WVz-Qg-uV0" secondAttribute="leading" constant="60" id="UXX-Ys-2UR"/>
+                            <constraint firstItem="n6I-vx-T5c" firstAttribute="leading" secondItem="yK4-Gp-SKe" secondAttribute="leading" id="XBb-6V-nGf"/>
+                            <constraint firstItem="WVz-Qg-uV0" firstAttribute="bottom" secondItem="a19-38-762" secondAttribute="bottom" constant="20" id="aaX-TJ-FEI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyc-21-KDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.91549295774648" y="-631.29770992366412"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -87,6 +155,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="plh-Ky-MJw" kind="presentation" modalTransitionStyle="crossDissolve" id="W4y-h9-e9Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -115,20 +186,32 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="maximumValueLabel" destination="89y-ut-reS" id="64k-oQ-GR6"/>
+                        <outlet property="minimumValueLabel" destination="YUA-de-6Kx" id="xz4-n5-2Ix"/>
                         <outlet property="slider" destination="iqz-mj-wfH" id="Bfq-D6-FIR"/>
+                        <outlet property="sliderValueLabel" destination="CCH-Lt-9Vv" id="6tD-qx-SXQ"/>
+                        <outlet property="tryCountLabel" destination="5rG-Mw-zTO" id="giG-hv-qCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.394366197183103" y="-28.244274809160306"/>
+            <point key="canvasLocation" x="41" y="176"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="memories" catalog="system" width="128" height="112"/>
+        <image name="profile_image" width="32" height="32"/>
+        <image name="xmark.app" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

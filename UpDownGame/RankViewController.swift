@@ -45,6 +45,7 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // @IBOutlet var tableView: UITableView!
     
+    // 텍스트 가져오는 문법
     override func viewDidLoad() {
         if text != nil {
             label.text = text

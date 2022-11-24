@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     // 슬라이더의 현재값이 얼마나 되는지 연결해줄 레이블
     @IBOutlet weak var sliderValueLabel: UILabel!
     
+    // 넘겨줄 이름
+    @IBOutlet weak var nameText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -77,20 +80,33 @@ class ViewController: UIViewController {
         // 정답체크
         
         if(hitValue == randomValue) {
-            showAlert(message: "YOU HIT!!")
-            print("YOU HIT!!")
+            showAlert(message: "YOU HIT!! \n 정답은 : \(randomValue)입니다.")
+            // print("YOU HIT!!")
             tryCount += 1
             tryCountLabel.text = "\(tryCount) / 5"
+            
+            let controller = storyboard?.instantiateViewController(identifier: "SecondVC") as! RankViewController
+            controller.text = nameText.text
+            //controller.modalPresentationStyle = .fullScreen
+            present(controller, animated: true, completion: nil)
+        
             reset()     // 맞췄을 시 초기화
             return
         } else if (tryCount >= 4) {
-            showAlert(message: "YOU LOSE..")
-            print("YOU LOSE..")
+            showAlert(message: "YOU LOSE... \n 정답은 : \(randomValue)입니다.")
+            // print("YOU LOSE..")
+            
+            let controller = storyboard?.instantiateViewController(identifier: "SecondVC") as! RankViewController
+            controller.text = nameText.text
+            //controller.modalPresentationStyle = .fullScreen
+            present(controller, animated: true, completion: nil)
+            
+            
             reset()     // 틀렸을 시 초기화
             return
         } else if(hitValue < randomValue) {
             noticeAlert(message: "UP!")
-            print("UP!")
+            // print("UP!")
             tryCount += 1
             tryCountLabel.text = "\(tryCount) / 5"
             
@@ -99,7 +115,7 @@ class ViewController: UIViewController {
             
         } else if(hitValue > randomValue) {
             noticeAlert(message: "DOWN!")
-            print("DOWN!")
+            // print("DOWN!")
             tryCount += 1
             tryCountLabel.text = "\(tryCount) / 5"
             
@@ -108,7 +124,7 @@ class ViewController: UIViewController {
             
         } else {
             showAlert(message: "상정하지 못한 오류입니다.")
-            print("상정하지 못한 오류입니다.")
+            // print("상정하지 못한 오류입니다.")
         }
         
     }
